@@ -41,24 +41,21 @@ export default createStore({
   },
   actions: {
     searchCity({ commit }, { cityName }) {
-      const searchCityUrl =  `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`;
-      let latitude = "";
-      let longitude = "";
-      const fetchDataUrl =  `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`;
+      const searchCityUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`;
       axios.get(searchCityUrl).then(response => {
-        latitude = response.data.coord.lat;
-        longitude = response.data.coord.lon;
+        const fetchDataUrl =  `https://api.openweathermap.org/data/2.5/onecall?lat=${response.data.coord.lat}&lon=${response.data.coord.lon}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`;
+        axios.get(fetchDataUrl).then(res => {
+          const city = {
+            name: cityName,
+            details: res.data,
+            createdAt: new Date()
+          };
+          commit("addCity", city);
+        })
       }).catch(error => {
         commit("setError", error);
       });
-      axios.get(fetchDataUrl).then(response => {
-        const city = {
-          name: cityName,
-          details: response.data,
-          createdAt: new Date()
-        };
-        commit("addCity", city);
-      })
+
     },
     getCityData({ dispatch, state }){
       const cities = state.cities;
@@ -68,7 +65,7 @@ export default createStore({
       }
     },
     updateCityData({ commit }, { latitude, longitude, cityName }){
-      const fetchDataUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`;
+      const fetchDataUrl =   `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`;
       axios.get(fetchDataUrl).then(response => {
         const city = {
           name: cityName,
@@ -76,7 +73,10 @@ export default createStore({
         };
         commit("updateCity", city);
       })
-    }
+    },
+    removeCityData({ commit }, { city }){
+      commit("removeCity", city);
+    },
   },
   plugins: [vuexLocal.plugin]
 })
