@@ -1,0 +1,40 @@
+<template>
+    <div class="sky">
+        <span class="sun sunshine"></span>
+        <span class="sun"></span>
+    </div>
+</template>
+
+<style lang="scss" scoped>
+.sky {
+    width: 250px;
+    height: 250px;
+    margin: 100px auto;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sun {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(to right, #fcbb04, #fffc00);
+    border-radius: 60px;
+    display: inline;
+    position: absolute;
+    &.sunshine {
+    animation: sunshines 2s infinite;
+    }
+}
+@keyframes sunshines {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+
+</style>
