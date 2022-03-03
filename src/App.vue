@@ -1,15 +1,33 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header />
+  <div class="container justify-content-center">
+    <SearchCity />
+    <ErrorMessage />
+    <CityList />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SearchCity from './components/SearchCity';
+import CityList from "./components/CityList";
+import Header from "./components/Header";
+import ErrorMessage from "./components/ErrorMessage";
 
+import { useI18n } from 'vue-i18n';
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    SearchCity,
+    CityList,
+    Header,
+    ErrorMessage
+  },
+  setup() {
+    const { t } = useI18n({
+      inheritLocale: true,
+      useScope: 'local'
+    })
+    return { t }
   }
 }
 </script>
@@ -17,14 +35,11 @@ export default {
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-  text-align: center;
+  color: #151616;
   background-image: url("https://source.unsplash.com/random/?nature");
   background-repeat: no-repeat;
   background-size: cover;
+  text-align: center;
 }
 </style>
