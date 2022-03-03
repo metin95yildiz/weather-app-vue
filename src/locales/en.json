@@ -1,5 +1,4 @@
 {
-    "en": {
       "sun": "Sun",
       "mon": "Mon",
       "tues": "Tues",
@@ -7,8 +6,8 @@
       "thu": "Thu",
       "fri": "Fri",
       "sat": "Sat",
-      "night": "Night: <span>%{temp}&#176;C</span>",
-      "day": "Day: <span>%{temp}&#176;C</span>",
+      "night": "Night: %{temp}°C",
+      "day": "Day: %{temp}°C",
       "todayCity": "Today in %{city}: %{day}",
       "rain": "Rain",
       "clouds": "Clouds",
@@ -35,5 +34,4 @@
       "add": "Add",
       "enterCity": "Enter a city name...",
       "searchTitle": "Add City to See Weather Details"
-    }
   }
