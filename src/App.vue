@@ -14,7 +14,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -22,5 +22,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  text-align: center;
+  background-image: url("https://source.unsplash.com/random/?nature");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>
