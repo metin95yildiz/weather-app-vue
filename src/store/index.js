@@ -24,8 +24,8 @@ export default createStore({
         [data.name]: { ...state.cities[data.name], "details": data.details }
       }
     },
-    removeCity(state, data){
-      delete state.cities[data.name]
+    removeCity(state, city){
+      delete state.cities[city]
     },
     setError(state, error){
       state.error = error;
@@ -34,7 +34,10 @@ export default createStore({
   getters: {
     getCities(state) {
       return state.cities;
-    }
+    },
+    getError(state) {
+      return state.error;
+    },
   },
   actions: {
     searchCity({ commit }, { cityName }) {
@@ -46,7 +49,7 @@ export default createStore({
         latitude = response.data.coord.lat;
         longitude = response.data.coord.lon;
       }).catch(error => {
-        commit("setError", "The city your're searching for was not found...");
+        commit("setError", error);
       });
       axios.get(fetchDataUrl).then(response => {
         const city = {
@@ -63,7 +66,6 @@ export default createStore({
         Object.values(cities).map(city => (dispatch("updateCityData",
         { latitude: city.details.lat, longitude: city.details.lon, cityName: city.name })))
       }
-      
     },
     updateCityData({ commit }, { latitude, longitude, cityName }){
       const fetchDataUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`;
@@ -73,8 +75,6 @@ export default createStore({
           details: response.data
         };
         commit("updateCity", city);
-      }).catch((error) => {
-          commit("setError", "Updating city failed...");
       })
     }
   },
