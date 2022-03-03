@@ -1,7 +1,7 @@
 <template>
     <div class="time-box">
         <div class="time">
-            <span className="am-pm">
+            <span class="am-pm">
             </span>
         </div>
         <div class="date">
