@@ -2,7 +2,7 @@
     <div class="add-city-form row py-3 my-5 rounded">
         <h2>{{t("searchTitle")}}</h2>
         <form class="form-inline d-flex justify-content-center">
-            <div class="p-1 fs-4">
+            <div class="fs-4">
                 <input type="search" class="search-input rounded-start"
                 v-model="cityName" name="cityName"
                 :placeholder="t('enterCity')"/>

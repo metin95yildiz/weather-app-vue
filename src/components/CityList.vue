@@ -1,6 +1,6 @@
 <template>
-        <ul class="city-list list-group row my-5 overflow-hidden"
-            v-if="getCities" @after-enter="afterEnter">
+        <ul class="city-list list-group my-5 overflow-auto"
+             @after-enter="afterEnter">
             <City v-for="city in getCities" :city="city" :key="city.name" />
         </ul>
 </template>
@@ -26,5 +26,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.city-list {
+    height: 30rem;
+}
 </style>
