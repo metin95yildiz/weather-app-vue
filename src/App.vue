@@ -58,8 +58,11 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
+    min-height: 100vh;
+    height: 100%;
     footer {
       display: inline-block;
+      left: 0;
       bottom: 0;
       background-color: rgb(128, 128, 128, 0.5);
       width: 100%;
