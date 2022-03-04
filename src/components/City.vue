@@ -1,25 +1,25 @@
 <template>
-    <transition-group name="slide">
-        <li class="city list-group-item rounded" :key="city.name">
-            <div class="city-name position-relative">
-                <h2 class="fw-bolder">{{city.name}}</h2>
-                <button class="position-absolute border-0 top-0 end-0" title="Remove city" @click="remove(city.name)"></button>
-            </div>
-            <div class="d-flex current-weather">
-                <Current :current="city.details.current"
-                :timezone="city.details.timezone"/>
-            </div>
-            <div class="d-flex weekly-forecast overflow-auto">
-              <Card v-for="(day, index) in city.details.daily" :key="index"
-              :day="day" :cityName="city.name" :isToday="index === 0 ? true : false"/>
-            </div>
-        </li>
-    </transition-group>
+      <li class="city list-group-item rounded my-2 animate__animated animate__fadeInLeft" ref="cities" :key="city.name">
+          <div class="city-name position-relative">
+              <h2 class="fw-bolder">{{city.name}}</h2>
+              <button class="position-absolute border-0 top-0 end-0" :title="t('removeCity')" @click="remove(city.name)"></button>
+          </div>
+          <div class="d-flex current-weather">
+              <Current :current="city.details.current"
+              :timezone="city.details.timezone"/>
+          </div>
+          <div class="d-flex weekly-forecast overflow-auto">
+            <Card v-for="(day, index) in city.details.daily" :key="index"
+            :day="day" :cityName="city.name" :isToday="index === 0 ? true : false"
+            :dayName="new Date(day.dt*1000).getDay()"/>
+          </div>
+      </li>
 </template>
 
 <script>
 import Card from "./Card.vue";
 import Current from "./Current.vue";
+import { useI18n } from "vue-i18n";
 
 export default {
     name: "City",
@@ -32,10 +32,19 @@ export default {
     },
     methods: {
       remove(value){
-        this.$store.dispatch("removeCityData", {
+        this.$refs.cities.classList.add("animate__fadeOutLeft");
+        setTimeout(() => { this.$store.dispatch("removeCityData", {
           city: value
-        })
+        })},1000)
       }
+    },
+    setup() {
+      const { t } = useI18n({
+      inheritLocale: true,
+      useScope: 'local'
+      })
+
+      return { t }
     }
 }
 </script>
@@ -58,37 +67,6 @@ li.city {
               opacity: 1;
             }
       }
-  }
-}
-.slide-enter, .slide-leave-active {
-    opacity: 0;
-}
-.slide-enter-active {
-    animation: slide-in 1s ease-out forwards;
-    transition: opacity 0.5s;
-}
-
-.slide-leave-active {
-    animation: slide-out 1s ease-out forwards;
-    transition: opacity 0.5s;
-}
-.slide-move {
-    transition: transform 1s;
-}
-@keyframes slide-in{
-  from {
-    transform: translateY(20px);
-  }
-  to {
-    transform: translateY(0px)
-  }
-}
-@keyframes slide-out{
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(20px)
   }
 }
 </style>
