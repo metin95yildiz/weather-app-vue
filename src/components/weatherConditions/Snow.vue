@@ -30,16 +30,46 @@
         <div class="snowflake">
         ❄
         </div>
+        <div class="snowflake">
+        ❅
+        </div>
+        <div class="snowflake">
+        ❅
+        </div>
+        <div class="snowflake">
+        ❆
+        </div>
+        <div class="snowflake">
+        ❄
+        </div>
+        <div class="snowflake">
+        ❅
+        </div>
+        <div class="snowflake">
+        ❆
+        </div>
+        <div class="snowflake">
+        ❄
+        </div>
+        <div class="snowflake">
+        ❅
+        </div>
+        <div class="snowflake">
+        ❅
+        </div>
+        <div class="snowflake">
+        ❄
+        </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
 .snowflake {
     color: #fff;
-    font-size: 1em;
+    font-size: 1rem;
     text-shadow: 0 0 1px #000;
     position:absolute;
-    top:0%;
+    top:-5%;
     z-index:-1;
     user-select:none;
     cursor:default;
@@ -53,40 +83,80 @@
         animation-delay:0s, 0s
     }
     &:nth-of-type(1){
-        left:10%;
+        left:5%;
         animation-delay:1s, 1s
     }
     &:nth-of-type(2){
-        left:20%;
+        left:10%;
         animation-delay:6s, 0.5s
     }
     &:nth-of-type(3){
-        left:30%;
+        left:15%;
         animation-delay:4s, 2s
     }
     &:nth-of-type(4){
-        left:40%;
+        left:20%;
         animation-delay:2s, 2s
     }
     &:nth-of-type(5){
-        left:50%;
+        left:25%;
         animation-delay:8s, 3s
     }
     &:nth-of-type(6){
-        left:60%;
+        left:30%;
         animation-delay:6s, 2s
     }
     &:nth-of-type(7){
-        left:70%;
+        left:35%;
         animation-delay:2.5s, 1s
     }
     &:nth-of-type(8){
-        left:80%;
+        left:40%;
         animation-delay:1s, 0s
     }
     &:nth-of-type(9){
-        left:90%;
+        left:45%;
         animation-delay:3s, 1.5s
+    }
+    &:nth-of-type(10) {
+        left:50%;
+        animation-delay:1s, 0.5s
+    }
+    &:nth-of-type(11){
+        left:55%;
+        animation-delay:3s, 2s
+    }
+    &:nth-of-type(12){
+        left:60%;
+        animation-delay:5s, 1.5s
+    }
+    &:nth-of-type(13){
+        left:65%;
+        animation-delay:6s, 4s
+    }
+    &:nth-of-type(14){
+        left:70%;
+        animation-delay:3s, 3s
+    }
+    &:nth-of-type(15){
+        left:75%;
+        animation-delay:8s, 3s
+    }
+    &:nth-of-type(16){
+        left:80%;
+        animation-delay:6s, 2s
+    }
+    &:nth-of-type(17){
+        left:85%;
+        animation-delay:6.5s, 1s
+    }
+    &:nth-of-type(18){
+        left:90%;
+        animation-delay:1s, 0s
+    }
+    &:nth-of-type(19){
+        left:95%;
+        animation-delay:3s, 2s
     }
 }
 

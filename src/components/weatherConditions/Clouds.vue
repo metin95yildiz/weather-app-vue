@@ -33,28 +33,28 @@
 	top: 0;
 	z-index: -1;
     .x1 {
-        animation: animateCloud 32s linear infinite;
+        animation: animateCloud 30s linear infinite;
         transform: scale(0.65);
     }
     .x2 {
-        animation: animateCloud 17s linear infinite;
+        animation: animateCloud 15s linear infinite;
         transform: scale(0.3);
     }
     .x3 {
-        animation: animateCloud 27s linear infinite;
+        animation: animateCloud 25s linear infinite;
         transform: scale(0.5);
     }
     .x4 {
-        animation: animateCloud 12s linear infinite;
+        animation: animateCloud 10s linear infinite;
         transform: scale(0.4);
     }
     .x5 {
-        animation: animateCloud 22s linear infinite;
+        animation: animateCloud 20s linear infinite;
         transform: scale(0.55);
     }
     .cloud {
-	background: linear-gradient(top,  #fff 5%,#f1f1f1 100%);
-	filter: linear-gradient( #fff, #f1f1f1,0);
+	background: linear-gradient(rgb(121, 121, 121) 5%,rgb(83, 83, 83) 60%);
+	filter: linear-gradient( rgb(121, 121, 121), rgb(83, 83, 83),0);
 	
 	border-radius: 100px;
 	

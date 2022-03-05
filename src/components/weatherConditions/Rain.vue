@@ -61,6 +61,66 @@
                 <div class="splat">
                 </div>
             </div>
+            <div class="raindrop">
+                <div class="stem">
+                </div>
+                <div class="splat">
+                </div>
+            </div>
+            <div class="raindrop">
+                <div class="stem">
+                </div>
+                <div class="splat">
+                </div>
+            </div>
+            <div class="raindrop">
+                <div class="stem">
+                </div>
+                <div class="splat">
+                </div>
+            </div>
+            <div class="raindrop">
+                <div class="stem">
+                </div>
+                <div class="splat">
+                </div>
+            </div>
+            <div class="raindrop">
+                <div class="stem">
+                </div>
+                <div class="splat">
+                </div>
+            </div>
+            <div class="raindrop">
+                <div class="stem">
+                </div>
+                <div class="splat">
+                </div>
+            </div>
+            <div class="raindrop">
+                <div class="stem">
+                </div>
+                <div class="splat">
+                </div>
+            </div>
+            <div class="raindrop">
+                <div class="stem">
+                </div>
+                <div class="splat">
+                </div>
+            </div>
+            <div class="raindrop">
+                <div class="stem">
+                </div>
+                <div class="splat">
+                </div>
+            </div>
+            <div class="raindrop">
+                <div class="stem">
+                </div>
+                <div class="splat">
+                </div>
+            </div>
         </div>
         <div class="rain back-row w-100 h-100">
             <div class="raindrop">
@@ -93,7 +153,7 @@
                 <div class="splat">
                 </div>
             </div>
-                        <div class="raindrop">
+            <div class="raindrop">
                 <div class="stem">
                 </div>
                 <div class="splat">
@@ -112,6 +172,66 @@
                 </div>
             </div>
               <div class="raindrop">
+                <div class="stem">
+                </div>
+                <div class="splat">
+                </div>
+            </div>
+            <div class="raindrop">
+                <div class="stem">
+                </div>
+                <div class="splat">
+                </div>
+            </div>
+            <div class="raindrop">
+                <div class="stem">
+                </div>
+                <div class="splat">
+                </div>
+            </div>
+            <div class="raindrop">
+                <div class="stem">
+                </div>
+                <div class="splat">
+                </div>
+            </div>
+            <div class="raindrop">
+                <div class="stem">
+                </div>
+                <div class="splat">
+                </div>
+            </div>
+            <div class="raindrop">
+                <div class="stem">
+                </div>
+                <div class="splat">
+                </div>
+            </div>
+            <div class="raindrop">
+                <div class="stem">
+                </div>
+                <div class="splat">
+                </div>
+            </div>
+            <div class="raindrop">
+                <div class="stem">
+                </div>
+                <div class="splat">
+                </div>
+            </div>
+            <div class="raindrop">
+                <div class="stem">
+                </div>
+                <div class="splat">
+                </div>
+            </div>
+            <div class="raindrop">
+                <div class="stem">
+                </div>
+                <div class="splat">
+                </div>
+            </div>
+            <div class="raindrop">
                 <div class="stem">
                 </div>
                 <div class="splat">
@@ -192,6 +312,46 @@
                     left:90%;
                     @include raindrops;
                 }
+                &:nth-of-type(10) {
+                    left:1%;
+                    @include raindrops;
+                }
+                &:nth-of-type(11){
+                    left:10%;
+                    @include raindrops;
+                }
+                &:nth-of-type(12){
+                    left:20%;
+                    @include raindrops;
+                }
+                &:nth-of-type(13){
+                    left:30%;
+                    @include raindrops;
+                }
+                &:nth-of-type(14){
+                    left:40%;
+                    @include raindrops;
+                }
+                &:nth-of-type(15){
+                    left:50%;
+                    @include raindrops;
+                }
+                &:nth-of-type(16){
+                    left:60%;
+                    @include raindrops;
+                }
+                &:nth-of-type(17){
+                    left:70%;
+                    @include raindrops;
+                }
+                &:nth-of-type(18){
+                    left:80%;
+                    @include raindrops;
+                }
+                &:nth-of-type(19){
+                    left:90%;
+                    @include raindrops;
+                }
             }
         }
         &.back-row {
@@ -201,39 +361,79 @@
                     @include raindrops;
                 }
                 &:nth-of-type(1){
-                    right:10%;
+                    right:5%;
                     @include raindrops;
                 }
                 &:nth-of-type(2){
-                    right:20%;
+                    right:10%;
                     @include raindrops;
                 }
                 &:nth-of-type(3){
-                    right:30%;
+                    right:15%;
                     @include raindrops;
                 }
                 &:nth-of-type(4){
-                    right:40%;
+                    right:20%;
                     @include raindrops;
                 }
                 &:nth-of-type(5){
-                    right:50%;
+                    right:25%;
                     @include raindrops;
                 }
                 &:nth-of-type(6){
-                    right:60%;
+                    right:30%;
                     @include raindrops;
                 }
                 &:nth-of-type(7){
-                    right:70%;
+                    right:35%;
                     @include raindrops;
                 }
                 &:nth-of-type(8){
-                    right:80%;
+                    right:40%;
                     @include raindrops;
                 }
                 &:nth-of-type(9){
+                    right:45%;
+                    @include raindrops;
+                }
+                &:nth-of-type(10) {
+                    right:50%;
+                    @include raindrops;
+                }
+                &:nth-of-type(11){
+                    right:55%;
+                    @include raindrops;
+                }
+                &:nth-of-type(12){
+                    right:60%;
+                    @include raindrops;
+                }
+                &:nth-of-type(13){
+                    right:65%;
+                    @include raindrops;
+                }
+                &:nth-of-type(14){
+                    right:70%;
+                    @include raindrops;
+                }
+                &:nth-of-type(15){
+                    right:75%;
+                    @include raindrops;
+                }
+                &:nth-of-type(16){
+                    right:80%;
+                    @include raindrops;
+                }
+                &:nth-of-type(17){
+                    right:85%;
+                    @include raindrops;
+                }
+                &:nth-of-type(18){
                     right:90%;
+                    @include raindrops;
+                }
+                &:nth-of-type(19){
+                    right:95%;
                     @include raindrops;
                 }
             }
@@ -245,7 +445,7 @@
     .raindrop {
         bottom: 100%;
         width: 15px;
-        height: 120px;
+        height: 150px;
         pointer-events: none;
         animation: raindrop 0.5s linear infinite;
         .stem {
@@ -259,7 +459,7 @@
         }
         .splat {
             width: 15px;
-            height: 10px;
+            height: 15px;
             border-top: 2px dotted rgba(255, 255, 255, 0.5);
             border-radius: 50%;
             opacity: 1;
