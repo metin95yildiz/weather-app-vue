@@ -33,5 +33,17 @@
   "errorMessage": "La ville que vous recherchez n'a pas été trouvée...",
   "add": "Ajouter",
   "enterCity": "Entrez un nom de ville...",
-  "searchTitle": "Ajouter une ville pour voir les détails de la météo"
+  "searchTitle": "Ajouter une ville pour voir les détails de la météo",
+  "january": "Janvier",
+  "february": "Février",
+  "march": "Mars",
+  "april": "Avril",
+  "may": "Mai",
+  "june": "Juin",
+  "july": "Juillet",
+  "august": "Août",
+  "september": "Septembre",
+  "october": "Octobre",
+  "november": "Novembre",
+  "december": "Décembre"
   }
