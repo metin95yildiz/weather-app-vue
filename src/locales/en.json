@@ -8,7 +8,7 @@
       "sat": "Sat",
       "night": "Night: %{temp}°C",
       "day": "Day: %{temp}°C",
-      "todayCity": "Today in %{city}: %{day}",
+      "todayCity": "Today in the city: %{day}",
       "rain": "Rain",
       "clouds": "Clouds",
       "snow": "Snow",

@@ -8,7 +8,7 @@
   "sat": "sam",
   "night": "Nuit: %{temp}°C",
   "day": "Jour: %{temp}°C",
-  "todayCity": "Aujourd'hui à %{city}: %{day}",
+  "todayCity": "Aujourd'hui dans la ville: %{day}",
   "rain": "Pluie",
   "clouds": "Nuageuse",
   "snow": "Neige",

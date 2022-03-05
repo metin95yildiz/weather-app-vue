@@ -8,7 +8,7 @@
   "sat": "Samstag",
   "night": "Nacht: %{temp}°C",
   "day": "Tag: %{temp}°C",
-  "todayCity": "Heute in %{city}: %{day}",
+  "todayCity": "Heute in der City: %{day}",
   "rain": "Regen",
   "clouds": "Wolking",
   "snow": "Schnee",

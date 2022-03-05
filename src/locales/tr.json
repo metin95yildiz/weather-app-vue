@@ -8,7 +8,7 @@
   "sat": "Cmt",
   "night": "Gece: %{temp}°C",
   "day": "Gündüz: %{temp}°C",
-  "todayCity": "%{city}'da bugün: %{day}",
+  "todayCity": "Şehirde bugün: %{day}",
   "rain": "Yağmur",
   "clouds": "Bulutlu",
   "snow": "Kar",
