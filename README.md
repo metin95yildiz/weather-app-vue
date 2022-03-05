@@ -15,6 +15,10 @@ Firstly, the city is searched. The weather information are retrieved with the la
 * Animate.css
 * Luxen
 
+## Demo
+
+You can reach demo from here: [https://weather-app-vue-ruddy.vercel.app/](https://weather-app-vue-ruddy.vercel.app/)
+
 ## Project setup
 ```
 npm install
