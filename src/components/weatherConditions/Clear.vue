@@ -1,7 +1,7 @@
 <template>
-    <div class="sky">
-        <span class="sun sunshine"></span>
-        <span class="sun"></span>
+    <div class="sky position-absolute mx-5">
+        <span class="sun sunshine position-absolute"></span>
+        <span class="sun position-absolute"></span>
     </div>
 </template>
 
@@ -9,19 +9,14 @@
 .sky {
     width: 250px;
     height: 250px;
-    margin: 100px auto;
     padding: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    z-index: -1;
 }
 .sun {
     width: 120px;
     height: 120px;
     background: linear-gradient(to right, #fcbb04, #fffc00);
-    border-radius: 60px;
-    display: inline;
-    position: absolute;
+    border-radius: 100%;
     &.sunshine {
     animation: sunshines 2s infinite;
     }

@@ -1,5 +1,5 @@
 <template>
-    <div id="background-wrap">
+    <div class="background-wrap pt-5 position-absolute">
         <div class="x1">
             <div class="cloud"></div>
         </div>
@@ -26,32 +26,30 @@
 </script>
 
 <style lang="scss">
-#background-wrap {
+.background-wrap {
     bottom: 0;
 	left: 0;
-	padding-top: 50px;
-	position: fixed;
 	right: 0;
 	top: 0;
 	z-index: -1;
     .x1 {
-        animation: animateCloud 35s linear infinite;
+        animation: animateCloud 32s linear infinite;
         transform: scale(0.65);
     }
     .x2 {
-        animation: animateCloud 20s linear infinite;
+        animation: animateCloud 17s linear infinite;
         transform: scale(0.3);
     }
     .x3 {
-        animation: animateCloud 30s linear infinite;
+        animation: animateCloud 27s linear infinite;
         transform: scale(0.5);
     }
     .x4 {
-        animation: animateCloud 18s linear infinite;
+        animation: animateCloud 12s linear infinite;
         transform: scale(0.4);
     }
     .x5 {
-        animation: animateCloud 25s linear infinite;
+        animation: animateCloud 22s linear infinite;
         transform: scale(0.55);
     }
     .cloud {
@@ -66,7 +64,7 @@
 	position: relative;
 	width: 350px;
     &::before, &::after {
-        background: #fff;
+        background: linear-gradient(rgb(121, 121, 121) 50%,rgb(83, 83, 83) 90%);
         content: '';
         position: absolute;
         z-indeX: -1;
