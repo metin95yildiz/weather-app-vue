@@ -1,24 +1,22 @@
 <template>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <h1>Weather App</h1>
-            </div>
-            <div class="locale-changer">
-                <select v-model="$i18n.locale">
+        <nav class="navbar justify-content-between">
+            <Time />
+            <div class="float-end mx-4">
+                <select v-model="locale"  class="form-select text-uppercase">
                     <option v-for="lang in langs" :key="lang" :value="lang">
                         {{lang}}
                     </option>
 
                 </select>
             </div>
-            <Time />
         </nav>
     </header>
 </template>
 
 <script>
 import Time from "./Time.vue";
+import i18n from "../i18n";
 
 export default {
     name: "Header",
@@ -27,7 +25,9 @@ export default {
     },
     data() {
         return {
-            langs: ["EN", "FR", "DE", "JP"]
+            langs: ["en", "fr", "de", "jp", "tr"],
+            locale: i18n.global.locale
+
         }
     }
 }
@@ -38,7 +38,6 @@ export default {
       display: inline-block;
       top: 0;
       background-color: rgb(128, 128, 128, 0.5);
-      height: 5rem;
       width: 100%;
     }
 </style>
