@@ -3,7 +3,7 @@
         <nav class="navbar justify-content-between">
             <Time />
             <div class="float-end mx-4">
-                <select v-model="locale"  class="form-select text-uppercase">
+                <select v-model="locale" title="locale" class="form-select text-uppercase">
                     <option v-for="lang in langs" :key="lang" :value="lang">
                         {{lang}}
                     </option>
