@@ -43,7 +43,7 @@ export default {
     methods: {
         currentTime(){
             const today = new Date();
-            this.date = today.getDate();
+            const date = today.getDate();
             const minutes = today.getMinutes();
             const month = today.getMonth();
             this.month = month;
@@ -55,6 +55,7 @@ export default {
             this.minutes = minutes < 10 ? "0" + minutes : minutes;
             this.year = today.getFullYear();
             this.monthFormat = month < 10 ? "0"+month : month;
+            this.date = date < 10 ? "0"+date : date;
         }
     },
     created(){
