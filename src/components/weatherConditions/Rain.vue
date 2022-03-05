@@ -260,9 +260,9 @@
 };
 
 @mixin raindrops(){
-    animation-delay: (randomHundred()/100) *1s;
-    animation-duration: (0.5 + randomHundred()/100) *1s;
-    bottom: (randomFive() + randomFive() - 1 + 100)/100;
+    animation-delay: calc((randomHundred()/100) *1s);
+    animation-duration: calc((0.5 + randomHundred()/100) *1s);
+    bottom: calc((randomFive() + randomFive() - 1 + 100)/100);
 }
 .back-row {
     .rain {
@@ -454,8 +454,8 @@
             margin-left: 7px;
             background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25));
             animation: stem 0.5s linear infinite;
-            animation-delay: (randomHundred()/100) *1s;
-            animation-duration: (0.5 + randomHundred()/100)*1s;
+            animation-delay: calc((randomHundred()/100) *1s);
+            animation-duration: calc((0.5 + randomHundred()/100)*1s);
         }
         .splat {
             width: 15px;
@@ -465,8 +465,8 @@
             opacity: 1;
             transform: scale(0);
             animation: splat 0.5s linear infinite;
-            animation-delay: (randomHundred()/100) *1s;
-            animation-duration: (0.5 + randomHundred()/100)*1s;
+            animation-delay: calc((randomHundred()/100) *1s);
+            animation-duration: calc((0.5 + randomHundred()/100)*1s);
         }
     }
 }
