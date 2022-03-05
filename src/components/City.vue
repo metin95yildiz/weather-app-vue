@@ -1,5 +1,6 @@
 <template>
-      <li class="city list-group-item rounded my-2 animate__animated animate__fadeInLeft" ref="cities" :key="city.name">
+      <li class="city list-group-item rounded my-2 animate__animated animate__fadeInLeft overflow-hidden" ref="cities" :key="city.name">
+          <WeatherAnimation :weather="city.details.daily[0].weather[0].main" />
           <div class="city-name position-relative">
               <h2 class="fw-bolder">{{city.name}}</h2>
               <button class="position-absolute border-0 top-0 end-0" :title="t('removeCity')" @click="remove(city.name)"></button>
@@ -19,6 +20,7 @@
 <script>
 import Card from "./Card.vue";
 import Current from "./Current.vue";
+import WeatherAnimation from "./WeatherAnimation.vue";
 import { useI18n } from "vue-i18n";
 
 export default {
@@ -28,7 +30,8 @@ export default {
     },
     components: {
       Card,
-      Current
+      Current,
+      WeatherAnimation
     },
     methods: {
       remove(value){
@@ -52,6 +55,7 @@ export default {
 <style lang="scss" scoped>
 li.city {
   background-color: rgb(128, 128, 128, 0.5);
+  min-height: 45rem;
   .city-name {
       button{
             height: 2.5rem;
