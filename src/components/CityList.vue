@@ -1,6 +1,5 @@
 <template>
-        <ul class="city-list list-group my-5 overflow-auto"
-             @after-enter="afterEnter">
+        <ul class="city-list list-group my-5 overflow-auto">
             <City v-for="city in getCities" :city="city" :key="city.name" />
         </ul>
 </template>
@@ -18,9 +17,12 @@ export default {
           ...mapGetters(["getCities"])
       },
       methods: {
-          afterEnter() {
+          fetchData() {
               this.$store.dispatch("getCityData")
           }
+      },
+      created() {
+          this.fetchData();
       }
 }
 </script>
