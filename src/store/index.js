@@ -1,8 +1,11 @@
 import { createStore } from 'vuex';
 import VuexPersistence from 'vuex-persist';
 import axios from 'axios';
+import i18n from '../i18n';
 
 const API_KEY = "4f2ecdfde44ef77b912eae41ecfa42af"; // API Key
+
+const lang = i18n.global.locale;
 
 const vuexLocal = new VuexPersistence({
   storage: window.localStorage,
@@ -41,7 +44,7 @@ export default createStore({
   },
   actions: {
     searchCity({ commit }, { cityName }) {
-      const searchCityUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`;
+      const searchCityUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&lang=${lang}`;
       axios.get(searchCityUrl).then(response => {
         const fetchDataUrl =  `https://api.openweathermap.org/data/2.5/onecall?lat=${response.data.coord.lat}&lon=${response.data.coord.lon}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`;
         axios.get(fetchDataUrl).then(res => {
