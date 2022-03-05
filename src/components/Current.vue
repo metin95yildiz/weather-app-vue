@@ -13,10 +13,10 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <p>{{ t("sunrise", { value: formatTime(current.sunrise, timezone) }) }}</p>
+                    <p>{{ t("sunrise", { value: formatTime(current.sunrise, timezone, locale) }) }}</p>
                 </div>
                 <div class="col">
-                    <p>{{ t("sunset", { value: formatTime(current.pressure, timezone) }) }}</p>
+                    <p>{{ t("sunset", { value: formatTime(current.sunset, timezone, locale) }) }}</p>
                 </div>
             </div>
         </div>
@@ -25,6 +25,7 @@
 <script>
 import { useI18n } from "vue-i18n";
 import { DateTime } from "luxon";
+import i18n from "../i18n";
 
 export default {
       name: "Current",
@@ -32,12 +33,17 @@ export default {
             current: Object,
             timezone: String
         },
+        data(){
+            return {
+                locale: i18n.global.locale
+            }
+        },
         methods: {
-            formatTime(date, timezone){
+            formatTime(date, timezone, locale){
                 const localDate = DateTime.fromSeconds(date).setZone(timezone);
-                const hours = localDate.toFormat("hh");
+                const hours = locale === "en" ? localDate.toFormat("hh") : localDate.toFormat("HH");
                 const minutes = localDate.toFormat("mm");
-                const amPm  = localDate.toFormat("a");
+                const amPm  = locale === "en" ?  localDate.toFormat("a"): locale === "de" ? "Uhr" : "";
                 return `${hours}:${minutes} ${amPm}`;
             }
         },

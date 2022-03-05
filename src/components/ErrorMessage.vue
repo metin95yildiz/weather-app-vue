@@ -1,9 +1,7 @@
 <template>
-    <transition name="fade" appear>
-        <div class="alert alert-danger" v-show="getError">
-            <p>{{ t("errorMessage")}}</p>
-        </div>
-    </transition>
+    <div class="alert alert-danger animate__animated animate__bounceIn" v-show="getError">
+        {{ t("errorMessage")}}
+    </div>
 </template>
 
 <script>
@@ -26,11 +24,3 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.fade-enter, .fade-leave-to {
-    opacity: 0;
-}
-.fade-enter-active, .fade-leave-active {
-    transition: opacity 1s;
-}
-</style>
