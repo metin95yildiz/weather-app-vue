@@ -1,15 +1,16 @@
 <template>
-      <li class="city list-group-item rounded my-2 animate__animated animate__fadeInLeft overflow-hidden" ref="cities" :key="city.name">
+      <li class="city list-group-item rounded my-2 animate__animated animate__fadeInLeft overflow-hidden"
+        ref="cities" :key="city.name">
           <WeatherAnimation :weather="city.details.daily[0].weather[0].main" />
           <div class="city-name position-relative">
               <h2 class="fw-bolder">{{city.name}}</h2>
               <button class="position-absolute border-0 top-0 end-0" :title="t('removeCity')" @click="remove(city.name)"></button>
           </div>
-          <div class="d-flex current-weather">
+          <div class="d-flex">
               <Current :current="city.details.current"
               :timezone="city.details.timezone"/>
           </div>
-          <div class="d-flex weekly-forecast overflow-auto">
+          <div class="d-flex overflow-auto">
             <Card v-for="(day, index) in city.details.daily" :key="index"
             :day="day" :cityName="city.name" :isToday="index === 0 ? true : false"
             :dayName="new Date(day.dt*1000).getDay()"/>

@@ -55,11 +55,8 @@
     .cloud {
 	background: linear-gradient(rgb(121, 121, 121) 5%,rgb(83, 83, 83) 60%);
 	filter: linear-gradient( rgb(121, 121, 121), rgb(83, 83, 83),0);
-	
 	border-radius: 100px;
-	
 	box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
-
 	height: 120px;
 	position: relative;
 	width: 350px;
@@ -71,7 +68,6 @@
     }
     &::after {
         border-radius: 100px;
-
         height: 100px;
         left: 50px;
         top: -50px;

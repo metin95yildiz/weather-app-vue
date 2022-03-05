@@ -277,79 +277,79 @@
                     @include raindrops;
                 }
                 &:nth-of-type(1){
-                    left:10%;
+                    left:5%;
                     @include raindrops;
                 }
                 &:nth-of-type(2){
-                    left:20%;
-                    @include raindrops;
-                }
-                &:nth-of-type(3){
-                    left:30%;
-                    @include raindrops;
-                }
-                &:nth-of-type(4){
-                    left:40%;
-                    @include raindrops;
-                }
-                &:nth-of-type(5){
-                    left:50%;
-                    @include raindrops;
-                }
-                &:nth-of-type(6){
-                    left:60%;
-                    @include raindrops;
-                }
-                &:nth-of-type(7){
-                    left:70%;
-                    @include raindrops;
-                }
-                &:nth-of-type(8){
-                    left:80%;
-                    @include raindrops;
-                }
-                &:nth-of-type(9){
-                    left:90%;
-                    @include raindrops;
-                }
-                &:nth-of-type(10) {
-                    left:1%;
-                    @include raindrops;
-                }
-                &:nth-of-type(11){
                     left:10%;
                     @include raindrops;
                 }
-                &:nth-of-type(12){
+                &:nth-of-type(3){
+                    left:15%;
+                    @include raindrops;
+                }
+                &:nth-of-type(4){
                     left:20%;
                     @include raindrops;
                 }
-                &:nth-of-type(13){
+                &:nth-of-type(5){
+                    left:25%;
+                    @include raindrops;
+                }
+                &:nth-of-type(6){
                     left:30%;
                     @include raindrops;
                 }
-                &:nth-of-type(14){
+                &:nth-of-type(7){
+                    left:35%;
+                    @include raindrops;
+                }
+                &:nth-of-type(8){
                     left:40%;
                     @include raindrops;
                 }
-                &:nth-of-type(15){
+                &:nth-of-type(9){
+                    left:45%;
+                    @include raindrops;
+                }
+                &:nth-of-type(10) {
                     left:50%;
                     @include raindrops;
                 }
-                &:nth-of-type(16){
+                &:nth-of-type(11){
+                    left:55%;
+                    @include raindrops;
+                }
+                &:nth-of-type(12){
                     left:60%;
                     @include raindrops;
                 }
-                &:nth-of-type(17){
+                &:nth-of-type(13){
+                    left:65%;
+                    @include raindrops;
+                }
+                &:nth-of-type(14){
                     left:70%;
                     @include raindrops;
                 }
-                &:nth-of-type(18){
+                &:nth-of-type(15){
+                    left:75%;
+                    @include raindrops;
+                }
+                &:nth-of-type(16){
                     left:80%;
                     @include raindrops;
                 }
-                &:nth-of-type(19){
+                &:nth-of-type(17){
+                    left:85%;
+                    @include raindrops;
+                }
+                &:nth-of-type(18){
                     left:90%;
+                    @include raindrops;
+                }
+                &:nth-of-type(19){
+                    left:95%;
                     @include raindrops;
                 }
             }
@@ -452,7 +452,7 @@
             width: 1px;
             height: 60%;
             margin-left: 7px;
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25));
+            background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25));
             animation: stem 0.5s linear infinite;
             animation-delay: (randomHundred()/100) *1s;
             animation-duration: (0.5 + randomHundred()/100)*1s;
@@ -476,9 +476,6 @@
   0% {
     transform: translateY(0vh);
   }
-  75% {
-    transform: translateY(90vh);
-  }
   100% {
     transform: translateY(90vh);
   }
@@ -487,9 +484,6 @@
 @keyframes stem {
   0% {
     opacity: 1;
-  }
-  75% {
-    opacity: 0;
   }
   100% {
     opacity: 0;

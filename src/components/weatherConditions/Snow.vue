@@ -64,6 +64,11 @@
 </template>
 
 <style lang="scss" scoped>
+@mixin animate($left, $delay){
+    left:$left;
+    animation-delay:$delay
+}
+
 .snowflake {
     color: #fff;
     font-size: 1rem;
@@ -79,84 +84,64 @@
     animation-iteration-count:infinite,  infinite;
     animation-play-state:running, running;
     &:nth-of-type(0) {
-        left:1%;
-        animation-delay:0s, 0s
+        @include animate(1%, (0s, 0s));
     }
     &:nth-of-type(1){
-        left:5%;
-        animation-delay:1s, 1s
+        @include animate(5%, (1s, 1s));
     }
     &:nth-of-type(2){
-        left:10%;
-        animation-delay:6s, 0.5s
+        @include animate(10%, (6s, 0.5s));
     }
     &:nth-of-type(3){
-        left:15%;
-        animation-delay:4s, 2s
+        @include animate(15%, (4s, 2s));
     }
     &:nth-of-type(4){
-        left:20%;
-        animation-delay:2s, 2s
+        @include animate(20%, (2s, 2s));
     }
     &:nth-of-type(5){
-        left:25%;
-        animation-delay:8s, 3s
+        @include animate(25%, (8s, 3s));
     }
     &:nth-of-type(6){
-        left:30%;
-        animation-delay:6s, 2s
+        @include animate(30%, (6s, 2s));
     }
     &:nth-of-type(7){
-        left:35%;
-        animation-delay:2.5s, 1s
+        @include animate(35%, (2.5s, 1s));
     }
     &:nth-of-type(8){
-        left:40%;
-        animation-delay:1s, 0s
+        @include animate(40%, (1s, 0s));
     }
     &:nth-of-type(9){
-        left:45%;
-        animation-delay:3s, 1.5s
+        @include animate(45%, (3s, 1.5s));
     }
     &:nth-of-type(10) {
-        left:50%;
-        animation-delay:1s, 0.5s
+        @include animate(50%, (1s, 0.5s));
     }
     &:nth-of-type(11){
-        left:55%;
-        animation-delay:3s, 2s
+        @include animate(55%, (3s, 2s));
     }
     &:nth-of-type(12){
-        left:60%;
-        animation-delay:5s, 1.5s
+        @include animate(60%, (5s, 1.5s));
     }
     &:nth-of-type(13){
-        left:65%;
-        animation-delay:6s, 4s
+        @include animate(65%, (6s, 4s));
     }
     &:nth-of-type(14){
-        left:70%;
-        animation-delay:3s, 3s
+        @include animate(70%, (3s, 3s));
     }
     &:nth-of-type(15){
-        left:75%;
-        animation-delay:8s, 3s
+        @include animate(75%, (8s, 3s));
     }
     &:nth-of-type(16){
-        left:80%;
-        animation-delay:6s, 2s
+        @include animate(80%, (6s, 2s));
     }
     &:nth-of-type(17){
-        left:85%;
-        animation-delay:6.5s, 1s
+        @include animate(85%, (6.5s, 1s));
     }
     &:nth-of-type(18){
-        left:90%;
-        animation-delay:1s, 0s
+        @include animate(90%, (1s, 0s));
     }
     &:nth-of-type(19){
-        left:95%;
-        animation-delay:3s, 2s
+        @include animate(95%, (3s, 2s));
     }
 }
 
