@@ -7,6 +7,8 @@
                 <div class="col">
                     <p>{{ t("humidity", { value: current.humidity }) }}</p>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col">
                     <p>{{ t("windSpeed", { value: current.wind_speed }) }}</p>
                 </div>
