@@ -5,7 +5,7 @@
             <div class="fs-4">
                 <input type="search" class="search-input rounded-start"
                 v-model="cityName" name="cityName"
-                :placeholder="t('enterCity')"/>
+                :placeholder="'London, Tokyo, New York...'"/>
             </div>
             <input type="submit" @click.prevent="search" class="btn btn-primary rounded-end"
             :value="t('add')" :disabled="!cityName"/>
