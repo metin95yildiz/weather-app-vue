@@ -1,6 +1,6 @@
 <template>
     <div class="time-box bg-light float-start mx-4 p-2 rounded">
-        <div v-if="day" class="animate__animated animate__jackInTheBox">
+        <div v-if="day !== ''" class="animate__animated animate__jackInTheBox">
             <div class="time">
                 {{hours}}:{{minutes}}
                 <span class="am-pm">
@@ -59,7 +59,7 @@ export default {
         }
     },
     created(){
-        setInterval(this.currentTime, 1000)
+        setInterval(this.currentTime, 1000);
     },
     setup(){
         const { t } = useI18n({
