@@ -14,7 +14,7 @@ const vuexLocal = new VuexPersistence({
 
 export default createStore({
   state: {
-    cities: {},
+    cities: [],
     error: ""
   },
   mutations: {
@@ -36,7 +36,9 @@ export default createStore({
   },
   getters: {
     getCities(state) {
-      return state.cities;
+      return Object.values(state.cities).sort((cityA, cityB) => {
+        return new Date(cityB.createdAt) - new Date(cityA.createdAt)
+      });
     },
     getError(state) {
       return state.error;
@@ -64,15 +66,21 @@ export default createStore({
       const cities = state.cities;
       if(cities) {
         Object.values(cities).map(city => (dispatch("updateCityData",
-        { latitude: city.details.lat, longitude: city.details.lon, cityName: city.name })))
+        {
+          latitude: city.details.lat,
+          longitude: city.details.lon,
+          cityName: city.name,
+          createdAt: city.createdAt
+        })))
       }
     },
-    updateCityData({ commit }, { latitude, longitude, cityName }){
+    updateCityData({ commit }, { latitude, longitude, cityName, createdAt }){
       const fetchDataUrl =   `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`;
       axios.get(fetchDataUrl).then(response => {
         const city = {
           name: cityName,
-          details: response.data
+          details: response.data,
+          createdAt
         };
         commit("updateCity", city);
       })
